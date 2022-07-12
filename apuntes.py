@@ -203,5 +203,77 @@
 #archivo1.write('podre gurdar mas texto en este mismo archivo?') #si se guarda, pero enseguida
 #archivo1.close()
 
-archivo = open('texto.txt', 'r')
-print(archivo.read())
+#archivo = open('texto.txt', 'r') #este parametro hace que sea de solo lectura
+#print(archivo.read()) #aqui vemos directo en pantalla lo que contiene el archivo
+#archivo2 = open('texto.txt', 'a') #el parametro 'a' permite agregar texto, 'w' para reemplazar
+#archivo2.write('\n se guardara una segunda linea?')
+#archivo2.close()
+#archivo3 =open('texto.txt', 'a')
+#archivo3.write('\n una vez abierto puedo seguir guardando texto')
+
+#Ahora intentaré agregar texto desde un input
+#def agregaTextoArchivo():
+#    archivo4 = input('Escribe lo que quieres agregar: \n')
+#    archivo5 = open('texto.txt', 'a')
+#    archivo5.write('\n' + archivo4)
+#    archivo5.close()
+#    archivo6 = open('texto.txt', 'r')
+#    print(archivo6.read())
+#agregaTextoArchivo()
+
+#def encriptar(textu):
+#    textoFinal = ''
+#    for letra in textu:
+#        textoFinal += letra + 'x'
+#    print('Texto Encriptado: ' + textoFinal)
+#
+#def desencriptar(textu):
+#    print('El texto a desencriptar es: ' + textu)
+#    textoFinal = ''
+#    contador = 0
+#    for letra in textu:
+#            if contador % 2 == 0:
+#            textoFinal += letra
+#        contador += 1
+#    print('Texto desencriptado:' + textoFinal)
+#
+#desencriptar('Hxoxlxax,x xcxoxmxox xexsxtxaxsx?x')
+
+def encriptar(texto):
+    textoFinal = ''
+    for letra in texto:
+        textoFinal += letra + 'x'
+    return textoFinal
+
+def desencriptar(texto):
+    textoFinal = ''
+    contador = 0
+    for letra in texto:
+        if contador % 2 == 0:
+            textoFinal += letra
+        contador += 1
+    return textoFinal
+
+def encriptarArchivo():
+    archivo = open('texto.txt', 'r')
+    texto = archivo.read()
+    archivo.close()
+    textoEncriptado = encriptar(texto)
+
+    archivo = open('texto.txt', 'w')
+    archivo.write(textoEncriptado)
+    archivo.close()
+
+#encriptarArchivo()
+
+def desencriptarArchivo():
+    archivo = open('texto.txt', 'r')
+    texto = archivo.read()
+    archivo.close()
+    textoDesencriptado = desencriptar(texto)
+
+    archivo = open('texto.txt', 'w')
+    archivo.write(textoDesencriptado)
+    archivo.close()
+
+desencriptarArchivo()
