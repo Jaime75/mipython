@@ -1,6 +1,1 @@
-Prueba de guardado en el archivopodre gurdar mas texto en este mismo archivo?
- se guardara una segunda linea?
- se guardara una segunda linea?
- una vez abierto puedo seguir guardando texto
-Esto es emocionante
-una nueva linea
+Hola este es un archivo de prueba. Jaime

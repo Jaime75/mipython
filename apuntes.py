@@ -239,41 +239,143 @@
 #
 #desencriptar('Hxoxlxax,x xcxoxmxox xexsxtxaxsx?x')
 
-def encriptar(texto):
-    textoFinal = ''
-    for letra in texto:
-        textoFinal += letra + 'x'
-    return textoFinal
+#def encriptar(texto):
+#    textoFinal = ''
+#    for letra in texto:
+#        textoFinal += letra + 'x'
+#    return textoFinal
 
-def desencriptar(texto):
-    textoFinal = ''
-    contador = 0
-    for letra in texto:
-        if contador % 2 == 0:
-            textoFinal += letra
-        contador += 1
-    return textoFinal
+#def desencriptar(texto):
+#    textoFinal = ''
+#    contador = 0
+#    for letra in texto:
+#        if contador % 2 == 0:
+#            textoFinal += letra
+#        contador += 1
+#    return textoFinal
 
-def encriptarArchivo():
-    archivo = open('texto.txt', 'r')
-    texto = archivo.read()
-    archivo.close()
-    textoEncriptado = encriptar(texto)
-
-    archivo = open('texto.txt', 'w')
-    archivo.write(textoEncriptado)
-    archivo.close()
-
+#def encriptarArchivo():
+#    archivo = open('texto.txt', 'r')
+#    texto = archivo.read()
+#    archivo.close()
+#    textoEncriptado = encriptar(texto)
+#
+#    archivo = open('texto.txt', 'w')
+#    archivo.write(textoEncriptado)
+#    archivo.close()
+#
 #encriptarArchivo()
 
-def desencriptarArchivo():
-    archivo = open('texto.txt', 'r')
-    texto = archivo.read()
-    archivo.close()
-    textoDesencriptado = desencriptar(texto)
+#def desencriptarArchivo():
+#    archivo = open('texto.txt', 'r')
+#    texto = archivo.read()
+#    archivo.close()
+#    textoDesencriptado = desencriptar(texto)
+#
+#    archivo = open('texto.txt', 'w')
+#    archivo.write(textoDesencriptado)
+#    archivo.close()
 
-    archivo = open('texto.txt', 'w')
-    archivo.write(textoDesencriptado)
-    archivo.close()
+#desencriptarArchivo()
+##
+#def encriptar(texto):
+#    textoFinal = ''
+#    for letra in texto:
+#        ascii = ord(letra)
+#        ascii += 1
+#        textoFinal += chr(ascii)
+#    return textoFinal
+#
+#def desencriptar(texto):
+#    textoFinal = ''
+#    for letra in texto:
+#        ascii = ord(letra)
+#        ascii -=1
+#        textoFinal += chr(ascii)
+#    return textoFinal
+#
+#def encriptarArchivo(rutaArchivo):
+#    archivo = open(rutaArchivo, 'r')
+#    texto = archivo.read()
+#    archivo.close()
+#    textoEncriptado = encriptar(texto)
+#
+#    archivo = open(rutaArchivo, 'w')
+#    archivo.write(textoEncriptado)
+#    archivo.close()
+#    print('El archivo se encriptó correctamente')
+#
+#encriptarArchivo()D
+#
+#def desencriptarArchivo(rutaArchivo):
+#    archivo = open(rutaArchivo, 'r')
+#    texto = archivo.read()
+#    archivo.close()
+#    textoDesencriptado = desencriptar(texto)
+#
+#    archivo = open(rutaArchivo, 'w')
+#    archivo.write(textoDesencriptado)
+#    archivo.close()
+#
+#respuestaEoD = input('Presione "E" para encriptar, o "D" para desencriptar')
+#rutaArchivo = input('Ingrese la ruta del archivo')
+#
+#if respuestaEoD =='E':
+#    encriptarArchivo(rutaArchivo)
+#else:
+#    desencriptarArchivo(rutaArchivo)
 
-desencriptarArchivo()
+#En este caso la ruta del archivo de prueba fue: C:\Users\Public\Documents\prueba\prueba1.txt.txt
+##
+# Array multidimensional
+#historial = [
+#    [34.5, 45.6, "2022/07/13 12:07:00"],
+#    [34.6, 45.7, "2022/07/13 12:07:10"],
+#    [34.8, 45.7, "2022/07/13 12:07:20"],
+#    [34.8, 45.7, "2022/07/13 12:07:30"],
+#    [34.9, 45.7, "2022/07/13 12:07:40"],
+#    [34.9, 45.8, "2022/07/13 12:07:50"]
+#]
+#
+#indiceLongitud = 0
+#indiceLatitud = 1
+#indiceFecha = 2 # Esto para evitar el uso de numeros mágicos
+#
+#for coordenada in historial:
+#    print(coordenada[indiceLongitud])# para mostrar las longitudes
+#
+#for coordenada in historial:
+#    print(coordenada) # para mostrar todo
+#
+##
+# Programación Orientada a Objetos
+#class Cuadrado:
+#    def __init__(self, ancho, alto):
+#        self.ancho = ancho
+#        self.alto = alto
+#        
+#    def calcularArea(self):
+#        area = self.ancho * self.alto
+#        return area
+#
+#figura = Cuadrado(10, 12)
+#print(figura.ancho)
+#print(figura.calcularArea())
+
+#class Triangulo:
+#    def __init__(self, base, altura):
+#        self.base = base
+#        self.altura = altura
+#
+#    def calcularArea(self):
+#        area = (self.base * self.altura)/2
+#        return area
+
+#print('Vamos a calcular el área de un triángulo: \n')
+#b = int(input('Introduzca el valor de la base del triángulo: \n'))
+#a = int(input('Introduzca el valor de la altura del triángulo: \n')) 
+#figura = Triangulo(b, a)
+#print('El valor del área de este triángulo es: ' +  str(figura.calcularArea()))
+
+## Aqui se van a generar los archivos main1.py, persona1.py, cliente1.py, empleado1.py para que se comprenda como se trabaja por lo general la POO
+
