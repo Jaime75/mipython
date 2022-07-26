@@ -25,15 +25,22 @@ def textos():
     print('Para calcular el promedio de 3 notas presiona "b" ')
     print('Para salir presiona "x"')
 
-textos()
 
-respuestaPregunta = input('Que desea hacer?: \n')
+def pregunta():
+    textos()
 
-if respuestaPregunta == 'a':
-    pedirDatos()
+    respuestaPregunta = input('Que desea hacer?: \n')
 
-if respuestaPregunta == 'b':
-    pedirDatosPromedio()
+    if respuestaPregunta == 'a':
+        pedirDatos()
+        pregunta()
 
-if respuestaPregunta == 'x':
-    print('Hasta pronto')
+    if respuestaPregunta == 'b':
+        pedirDatosPromedio()
+        pregunta()
+
+    if respuestaPregunta == 'x':
+        print('Hasta pronto')
+        
+
+pregunta()
