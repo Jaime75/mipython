@@ -1,3 +1,14 @@
+def calcularPuntaje(correctas, incorrectas, blanco):
+    puntaje = (correctas * 3 + incorrectas * (-1) + blanco * 0)
+    return puntaje
+
+def pedirDatosPuntaje():
+    correctas = int(input('Cuantas respuestas correctas son?: \n'))
+    incorrectas = int(input('Cuantas respuestas incorrectas son?: \n'))
+    blanco = int(input('Cuantas preguntas en blanco son?: \n'))
+    puntaje = calcularPuntaje(correctas, incorrectas, blanco)
+    print('El puntaje final es: ' + str(puntaje))
+
 def calcularPromedio(n1, n2, n3):
     promedio = (n1 + n2 + n3) / 3
     return promedio
@@ -23,6 +34,7 @@ def pedirDatos():
 def textos():
     print('Para calcular la distancia presiona "a" ')
     print('Para calcular el promedio de 3 notas presiona "b" ')
+    print('Para calcular el puntaje presiona "c" ')
     print('Para salir presiona "x"')
 
 
@@ -37,6 +49,10 @@ def pregunta():
 
     if respuestaPregunta == 'b':
         pedirDatosPromedio()
+        pregunta()
+    
+    if respuestaPregunta == 'c':
+        pedirDatosPuntaje()
         pregunta()
 
     if respuestaPregunta == 'x':
