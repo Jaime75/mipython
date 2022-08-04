@@ -1,5 +1,20 @@
 
-from cmath import sqrt
+from cmath import pi, sqrt
+
+def calcularVolumenCilindro(radio, altura):
+    volumenCilindro = pi * radio**2 * altura
+    return volumenCilindro
+    
+def calcularAreaCilindro(radio, altura):
+    areaCilindro = 2 * pi * radio * altura + 2 * pi * radio ** 2
+    return areaCilindro
+
+def pedirDatosCilindro():
+    radio = float(input('Cual es el radio del cilindro?: \n'))
+    altura = float(input('Cual es la altura del cilindro?: \n'))
+    volumen = calcularVolumenCilindro(radio,altura)
+    area = calcularAreaCilindro(radio, altura)
+    print('El volumen del cilindro es: ' + str(volumen) + 'el área del cilindro es: ' + str(area))
 
 def calcularPerimetroRectangulo(base, altura):
     perimetro = base * 2 + altura * 2
@@ -67,6 +82,7 @@ def textos():
     print('Para calcular el puntaje presiona "c" ')
     print('Para calcular la distancia entre 2 puntos presiona "d"')
     print('Para calcular el perimetro y el área de un rectángulo presione "e"')
+    print('Para calcular volumen y área de un cilindro presione "f"')
     print('Para salir presiona "x"')
 
 
@@ -93,6 +109,10 @@ def pregunta():
 
     if respuestaPregunta == 'e':
         pedirDatosRectangulo()
+        pregunta()
+
+    if respuestaPregunta == 'f':
+        pedirDatosCilindro()
         pregunta()
 
     if respuestaPregunta == 'x':
